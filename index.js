@@ -19,7 +19,10 @@ function Class(_this, _super) {
 
 var __extends = function(child, parent) {
   // Copy "class properties" from parent to child
-  if (!parent) return;
+  if (!parent) {
+    child.__super__ = Object
+    return;
+  }
   for (var key in parent) {
     child[key] = parent[key];
   }
@@ -30,5 +33,7 @@ var __extends = function(child, parent) {
 
   ctor.prototype = parent.prototype;
   child.prototype = new ctor;
+
+  child.__super__ = parent
   return child;
 };

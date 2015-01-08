@@ -1,0 +1,23 @@
+{
+  "name": "besike-Class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simpleton/besike-Class.git"
+  },
+  "author": "simsun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simpleton/besike-Class/issues"
+  },
+  "homepage": "https://github.com/simpleton/besike-Class",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}

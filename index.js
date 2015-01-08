@@ -14,7 +14,21 @@ function Class(_this, _super) {
       _this_ctor.prototype[v] = _this[v]
     }
   }
+
+  _this_ctor.prototype.super = function(func_name) {
+    return _this_ctor.__super__.prototype[func_name].apply(this, __extract_funcname(arguments))
+  }
   return _this_ctor
+}
+
+var __extract_funcname = function(arguments) {
+  args = []
+  for (var v in arguments) {
+    if (v > 0) {
+      args[v-1] = arguments[v];
+    }
+  }
+  return args
 }
 
 var __extends = function(child, parent) {

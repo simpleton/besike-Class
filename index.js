@@ -9,5 +9,6 @@ function Class(_this) {
     _this_ctor = function() {};
   }
 
+  _this_ctor.prototype = _this
   return _this_ctor
 }

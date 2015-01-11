@@ -17,8 +17,10 @@ function Class(_this, _super) {
 
   var current_class = _this_ctor
   _this_ctor.prototype.super = function(func_name) {
-    current_class = current_class.__super__
-    return current_class.prototype[func_name].apply(this, __extract_funcname(arguments))
+    current_class = current_class.__super__;
+    var super_func = current_class.prototype[func_name].apply(this, __extract_funcname(arguments));
+    current_class = _this_ctor;
+    return super_func;
   }
   return _this_ctor
 }
